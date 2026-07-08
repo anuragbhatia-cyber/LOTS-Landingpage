@@ -59,21 +59,21 @@ export function UDrivePage() {
 function Wordmark({ tone = 'dark', variant = 'mark' }: { tone?: 'dark' | 'light'; variant?: 'mark' | 'full' }) {
   if (variant === 'full') {
     return (
-      <a href="#" className="inline-flex items-center -ml-3">
+      <a href="#" className="inline-flex items-center">
         <img
-          src="/lots247-logo-full-white.webp"
-          alt="LOTS247 — India's first roadside legal assistance platform, by Lawyered"
-          className="h-24 w-auto"
+          src="/udrive-logo-white.png"
+          alt="UDrive by LOTS247"
+          className="h-16 w-auto"
           loading="lazy"
           decoding="async"
         />
       </a>
     )
   }
-  const src = tone === 'light' ? '/lots247-logo-white.png' : '/lots247-logo-dark.png'
+  const src = tone === 'light' ? '/udrive-logo-white.png' : '/udrive-logo-dark.png'
   return (
     <a href="#" className="inline-flex items-center">
-      <img src={src} alt="LOTS247" className="h-9 w-auto" />
+      <img src={src} alt="UDrive by LOTS247" className="h-10 w-auto" />
     </a>
   )
 }
@@ -778,19 +778,19 @@ type LocalizedCard = { img: string; alt: string; title: { en: string; hi: string
 const ROAD_REALITY_CARDS: LocalizedCard[] = [
   {
     img: '/issue-challan.png',
-    alt: 'Driver overwhelmed by pending challan papers',
+    alt: 'Driver receiving a challan from a police officer beside his truck at night',
     title: { en: 'Challan Pressure', hi: 'चालान का दबाव' },
     body: { en: 'Pending challans piling up. Renewals and permits getting blocked.', hi: 'पेंडिंग चालान बढ़ते जा रहे हैं। रिन्यूअल और परमिट अटक रहे हैं।' },
   },
   {
     img: '/issue-police.png',
-    alt: 'Driver speaking with a police officer at a checkpoint',
+    alt: 'Police officer checking a truck driver’s papers with a flashlight at night',
     title: { en: 'Police Checking', hi: 'पुलिस जाँच' },
     body: { en: 'Vehicle stopped, papers questioned, driver unsure what to say next.', hi: 'वाहन रोका गया, कागज़ात पर सवाल, ड्राइवर को समझ नहीं आ रहा क्या कहे।' },
   },
   {
     img: '/issue-business-delay.png',
-    alt: 'Stressed business owner facing a delayed delivery schedule',
+    alt: 'Stressed fleet owner at his desk at night, delivery status board and trucks behind him',
     title: { en: 'Business Delay', hi: 'व्यापार में देरी' },
     body: { en: 'One stuck trip cascades into missed deliveries and unhappy clients.', hi: 'एक रुकी हुई ट्रिप से डिलीवरी छूटती है और ग्राहक नाराज़ होते हैं।' },
   },
@@ -1205,7 +1205,7 @@ function DashboardPreview() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            'radial-gradient(700px 380px at 20% 20%, rgba(0,184,118,0.10), transparent 60%), radial-gradient(700px 500px at 90% 80%, rgba(255,255,255,0.04), transparent 60%)',
+            'radial-gradient(700px 380px at 20% 20%, rgba(84,196,210,0.10), transparent 60%), radial-gradient(700px 500px at 90% 80%, rgba(255,255,255,0.04), transparent 60%)',
         }}
       />
       <div className="relative mx-auto max-w-[1280px] px-4 sm:px-8 lg:px-16">
@@ -1264,7 +1264,7 @@ function DashboardPreview() {
               ))}
             </ul>
 
-            <button type="button" onClick={() => openModal()} className="group relative mt-5 w-full inline-flex items-center justify-center rounded-2xl bg-emerald-500 px-6 py-[16px] text-[14px] font-semibold text-white hover:bg-emerald-600 transition-colors shadow-[0_8px_24px_-12px_rgba(0,184,118,0.55)]">
+            <button type="button" onClick={() => openModal()} className="group relative mt-5 w-full inline-flex items-center justify-center rounded-2xl bg-emerald-500 px-6 py-[16px] text-[14px] font-semibold text-white hover:bg-emerald-600 transition-colors shadow-[0_8px_24px_-12px_rgba(84,196,210,0.55)]">
               <span>{t('Create My Dashboard', 'मेरा डैशबोर्ड बनाएँ')}</span>
               <span className="absolute right-2.5 top-1/2 -translate-y-1/2 inline-flex h-9 w-9 items-center justify-center rounded-xl bg-stone-950/25 transition-transform group-hover:translate-x-0.5">
                 <ArrowRight className="w-4 h-4 text-white" />
@@ -1285,12 +1285,12 @@ function DashboardPreview() {
               decoding="async"
             />
 
-            <div className="absolute inset-y-0 right-0 left-[42%] backdrop-blur-[4px] bg-white/40 flex items-center justify-center pointer-events-none">
+            <div className="absolute inset-y-0 right-0 left-[42%] backdrop-blur-[4px] bg-stone-950/40 flex items-center justify-center pointer-events-none">
               <div
                 className="absolute inset-0"
                 style={{
                   background:
-                    'linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 8%, rgba(255,255,255,0.55) 100%)',
+                    'linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 8%, rgba(0,0,0,0.55) 100%)',
                 }}
               />
               <div className="relative text-center px-6 w-full max-w-md pointer-events-auto">
@@ -1568,7 +1568,7 @@ function UseCases() {
               {/* resolution strip — visually distinct, white bg, emerald accent */}
               <div className="relative bg-white border-t border-stone-200/80 px-5 py-4 flex items-center justify-between">
                 <div className="flex items-center gap-2.5">
-                  <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-emerald-500 text-white shadow-[0_2px_8px_-2px_rgba(16,185,129,0.55)]">
+                  <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-emerald-500 text-white shadow-[0_2px_8px_-2px_rgba(84,196,210,0.55)]">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round" className="w-2.5 h-2.5">
                       <polyline points="4 12 10 18 20 6" />
                     </svg>
